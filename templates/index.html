@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Ассенизатор НН - Профессиональная откачка септиков и выгребных ям в Нижнем Новгороде</title>
+    <meta name="title" content="Ассенизатор НН - Профессиональная откачка септиков и выгребных ям в Нижнем Новгороде">
+    <meta name="description" content="Услуги ассенизатора в Нижнем Новгороде и области с 2009 года. Откачка септиков, выгребных ям, биотуалетов. Выезд 24/7, оперативно и недорого. Работаем со всеми районами города и области.">
+    <meta name="keywords" content="ассенизатор, откачка септиков, выгребные ямы, ассенизаторская машина, откачка канализации, Нижний Новгород, услуги ассенизатора, откачка ям, илосос, обслуживание септиков, канализация, очистка ям, аварийная откачка">
+    <meta name="author" content="Ассенизатор НН">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical link -->
+    <link rel="canonical" href="https://assentizatornn.ru/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://assentizatornn.ru/">
+    <meta property="og:title" content="Ассенизатор НН - Откачка септиков и выгребных ям в Нижнем Новгороде">
+    <meta property="og:description" content="Профессиональные услуги ассенизатора в Нижнем Новгороде. Откачка септиков, выгребных ям. Оперативный выезд, любой объем, честные цены. Работаем с 2009 года.">
+    <meta property="og:image" content="https://assentizatornn.ru/static/images/logo.jpg">
+    <meta property="og:site_name" content="Ассенизатор НН">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://assentizatornn.ru/">
+    <meta property="twitter:title" content="Ассенизатор НН - Откачка септиков в Нижнем Новгороде">
+    <meta property="twitter:description" content="Профессиональные услуги ассенизатора в Нижнем Новгороде. Оперативный выезд, любой объем, честные цены.">
+    <meta property="twitter:image" content="https://assentizatornn.ru/static/images/logo.jpg">
+    
+    <!-- Favicons для разных устройств -->
+    <link rel="icon" href="/static/images/logo.jpg" type="image/jpeg">
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+    <meta name="msapplication-TileImage" content="/static/images/logo.jpg">
+    <meta name="msapplication-TileColor" content="#0066cc">
+    <meta name="theme-color" content="#0066cc">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Анимации -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Стили для логотипа и анимации -->
+    <style>
+        /* Стили для логотипа */
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 6px;
+            margin-right: 15px;
+            display: block;
+        }
+        
+        .footer__logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        /* Стили для анимации успешной отправки формы */
+        #success-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .success-container {
+            text-align: center;
+        }
+        
+        .success-checkmark {
+            width: 80px;
+            height: 80px;
+            background-color: #0066cc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            transform: scale(0);
+            animation: scale-in 0.5s forwards;
+        }
+        
+        .checkmark-symbol {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fade-in 0.5s forwards 0.3s;
+        }
+        
+        @keyframes scale-in {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .success-message {
+            font-size: 24px;
+            color: #0066cc;
+            font-weight: bold;
+            opacity: 0;
+            animation: fade-in 0.5s forwards;
+            animation-delay: 1s;
+        }
+        
+        /* Стили для кнопки во время отправки */
+        button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        /* Улучшения для SEO и доступности */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        
+        /* Улучшенный контраст для текстов */
+        p, li, a {
+            color: #333;
+        }
+        
+        /* Улучшенная разметка заголовков */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        /* Улучшение доступности для фокуса */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+        }
+    </style>
+    
+    <!-- Микроразметка Schema.org для улучшения SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ассенизатор НН",
+      "image": "https://assentizatornn.ru/static/images/logo.jpg",
+      "logo": "https://assentizatornn.ru/static/images/logo.jpg",
+      "@id": "https://assentizatornn.ru",
+      "url": "https://assentizatornn.ru",
+      "telephone": "+79534159696",
+      "priceRange": "От 1000 руб.",
+      "description": "Профессиональные услуги ассенизатора в Нижнем Новгороде и области. Откачка септиков, выгребных ям, промывка канализации. Работаем с 2009 года.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Нижний Новгород",
+        "addressRegion": "Нижегородская область",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 56.3264816,
+        "longitude": 44.0051604
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://t.me/AssenizatorNN",
+        "https://wa.me/79534159696"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги ассенизатора",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Откачка септиков и выгребных ям",
+              "description": "Быстрая и качественная откачка септиков с использованием современной техники."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Аварийный выезд",
+              "description": "Оперативное устранение аварийных ситуаций – прорывов, засоров, переполнения."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Промывка канализации",
+              "description": "Профессиональная промывка засоров в канализационных системах любой сложности."
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "156"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Анимация успешной отправки формы -->
+    <div id="success-overlay" role="dialog" aria-labelledby="success-message-title">
+        <div class="success-container">
+            <div class="success-checkmark" aria-hidden="true">
+                <div class="checkmark-symbol">✓</div>
+            </div>
+            <div class="success-message" id="success-message-title">Заявка успешно отправлена!</div>
+        </div>
+    </div>
+
+    <!-- Прелоадер -->
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader__spinner"></div>
+        <p>Ассенизатор НН</p>
+    </div>
+
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="/static/images/logo.jpg" alt="Логотип компании Ассенизатор НН - услуги откачки септиков в Нижнем Новгороде" class="logo-img">
+                    <div class="header__title">
+                        <h1>Ассенизатор НН</h1>
+                        <p>Работаем с 2009 года</p>
+                    </div>
+                </div>
+                
+                <div class="header__contacts">
+                    <a href="tel:+79534159696" class="contact-item" aria-label="Позвонить по телефону">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3059/3059561.png" alt="" aria-hidden="true" class="contact-icon">
+                        <span>+7 (953) 415-96-96</span>
+                    </a>
+                    <a href="https://wa.me/79534159696" class="contact-item" aria-label="Написать в WhatsApp">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="" aria-hidden="true" class="contact-icon">
+                        <span>Сергей</span>
+                    </a>
+                    <a href="https://t.me/AssenizatorNN" class="contact-item" aria-label="Написать в Telegram">
+                        <img src="https://cdn-icons-png.flaticon.com/512/906/906377.png" alt="" aria-hidden="true" class="contact-icon">
+                        <span>@AssenizatorNN</span>
+                    </a>
+                    <div class="contact-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2664/2664627.png" alt="" aria-hidden="true" class="contact-icon">
+                        <span>8:00 - 18:00 ежедневно</span>
+                    </div>
+                </div>
+                
+                <div class="header__menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            
+            <nav class="main-nav" id="mainNav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#fleet">Автопарк</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#coverage">Зона обслуживания</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#order-form">Заказать</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="container">
+            <div class="hero__content" data-aos="fade-up">
+                <h2>Профессиональная очистка септиков и выгребных ям в Нижнем Новгороде</h2>
+                <p class="hero__subtitle">ОПЕРАТИВНЫЙ ВЫЕЗД В ЛЮБОЙ РАЙОН ГОРОДА И ОБЛАСТИ</p>
+                <div class="hero__features">
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2897/2897008.png" alt="" aria-hidden="true">
+                        <p>Любой объем</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2037/2037099.png" alt="" aria-hidden="true">
+                        <p>Оперативный выезд</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2682/2682309.png" alt="" aria-hidden="true">
+                        <p>Любой район</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1611/1611179.png" alt="" aria-hidden="true">
+                        <p>Честная цена</p>
+                    </div>
+                </div>
+                <a href="#order-form" class="btn btn-primary btn-large pulse-button">Заказать услугу</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">НАШИ УСЛУГИ</h2>
+            <div class="services__grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4207/4207247.png" alt="Иконка откачки септиков">
+                    </div>
+                    <h3 class="service-card__title">Откачка септиков и выгребных ям</h3>
+                    <p class="service-card__text">
+                        Быстрая и качественная откачка септиков с использованием современной техники. Справимся с любым объемом – от частного дома до промышленного объекта.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1934/1934435.png" alt="Иконка обслуживания частных домов">
+                    </div>
+                    <h3 class="service-card__title">Обслуживание частных домов</h3>
+                    <p class="service-card__text">
+                        Регулярное и разовое обслуживание канализационных систем частных домов, коттеджей и дач. Работаем аккуратно, сохраняя чистоту вашего участка.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3158/3158048.png" alt="Иконка работы с предприятиями">
+                    </div>
+                    <h3 class="service-card__title">Работа с предприятиями</h3>
+                    <p class="service-card__text">
+                        Комплексное обслуживание канализационных систем коммерческих объектов, предприятий и организаций. Предлагаем специальные условия для постоянных клиентов.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077198.png" alt="Иконка промывки канализации">
+                    </div>
+                    <h3 class="service-card__title">Промывка канализации</h3>
+                    <p class="service-card__text">
+                        Профессиональная промывка засоров в канализационных системах любой сложности. Используем специализированное оборудование для быстрого устранения проблем.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3631/3631062.png" alt="Иконка аварийного выезда">
+                    </div>
+                    <h3 class="service-card__title">Аварийный выезд</h3>
+                    <p class="service-card__text">
+                        Оперативное устранение аварийных ситуаций – прорывов, засоров, переполнения. Быстрый выезд в любой район Нижнего Новгорода и области.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Автопарк -->
+    <section id="fleet" class="section fleet">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">НАШ АВТОПАРК</h2>
+            <p class="section-subtitle" data-aos="fade-up">Мы располагаем современным и разнообразным автопарком, способным решить задачи любой сложности</p>
+            
+            <div class="fleet__grid">
+                <div class="fleet-card" data-aos="fade-right">
+                    <div class="fleet-card__image">
+                        <img src="/static/images/gaz 4-5m.jpg" alt="ГАЗ ассенизатор с цистерной 4-5 кубометров">
+                    </div>
+                    <div class="fleet-card__content">
+                        <h3>ГАЗ с цистерной 4-5 м³</h3>
+                        <p>Компактная и маневренная техника для обслуживания частных домов и дачных участков с узкими проездами.</p>
+                    </div>
+                </div>
+                
+                <div class="fleet-card" data-aos="fade-left">
+                    <div class="fleet-card__image">
+                        <img src="/static/images/kamaz 10m.png" alt="КАМАЗ ассенизатор с цистерной 10 кубометров">
+                    </div>
+                    <div class="fleet-card__content">
+                        <h3>КАМАЗ с цистерной 10 м³</h3>
+                        <p>Мощная техника для обслуживания крупных объектов, промышленных предприятий и многоквартирных домов.</p>
+                    </div>
+                </div>
+                
+                <div class="fleet-card" data-aos="fade-right">
+                    <div class="fleet-card__image">
+                        <img src="/static/images/maz 8.jpeg" alt="МАЗ ассенизатор с цистерной 8 кубометров">
+                    </div>
+                    <div class="fleet-card__content">
+                        <h3>МАЗ с цистерной 8 м³</h3>
+                        <p>Универсальная машина, сочетающая вместительную цистерну и хорошую проходимость.</p>
+                    </div>
+                </div>
+                
+                <div class="fleet-card" data-aos="fade-left">
+                    <div class="fleet-card__image">
+                        <img src="/static/images/maz 16m.jpg" alt="МАЗ ассенизатор с цистерной 16 кубометров">
+                    </div>
+                    <div class="fleet-card__content">
+                        <h3>МАЗ с цистерной 16 м³</h3>
+                        <p>Большой объем для промышленных объектов и масштабных работ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Преимущества -->
+    <section id="advantages" class="section advantages">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ПОЧЕМУ МЫ ЛУЧШЕ КОНКУРЕНТОВ</h2>
+            
+            <div class="advantages__grid">
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="advantage-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1484/1484575.png" alt="Иконка опыта">
+                    </div>
+                    <h3 id="years-experience">16 лет опыта</h3>
+                    <p>С 2009 года успешно решаем проблемы с канализацией в Нижнем Новгороде и области.</p>
+                </div>
+                
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="advantage-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/819/819159.png" alt="Иконка автопарка">
+                    </div>
+                    <h3>Собственный автопарк</h3>
+                    <p>Располагаем разнообразной специализированной техникой, которая позволяет выбрать оптимальное решение.</p>
+                </div>
+                
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="advantage-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2682/2682309.png" alt="Иконка выезда">
+                    </div>
+                    <h3>Выезд в любую точку</h3>
+                    <p>Работаем во всех районах Нижнего Новгорода и в пригороде без наценки за удаленность.</p>
+                </div>
+                
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="advantage-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991706.png" alt="Иконка подхода">
+                    </div>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Стоимость услуг обсуждается индивидуально в зависимости от объема и сложности работ.</p>
+                </div>
+                
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="advantage-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png" alt="Иконка чистоты">
+                    </div>
+                    <h3>Чистота и аккуратность</h3>
+                    <p>После нашей работы не остается следов – мы ценим чистоту на вашей территории.</p>
+                </div>
+                
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="advantage-card__icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3031/3031121.png" alt="Иконка быстрого выезда">
+                    </div>
+                    <h3>Быстрый выезд</h3>
+                    <p>Оперативно приезжаем на объект в удобное для вас время.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Процесс работы -->
+    <section class="section work-process">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">КАК МЫ РАБОТАЕМ</h2>
+            
+            <div class="work-process__steps">
+                <div class="work-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="work-step__number">1</div>
+                    <div class="work-step__content">
+                        <h3>Принимаем заявку</h3>
+                        <p>Вы звоните нам по номеру +7 (953) 415-96-96, пишете в WhatsApp или Telegram.</p>
+                    </div>
+                </div>
+                
+                <div class="work-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="work-step__number">2</div>
+                    <div class="work-step__content">
+                        <h3>Уточняем детали</h3>
+                        <p>Наш диспетчер выясняет все необходимые детали и согласовывает удобное время.</p>
+                    </div>
+                </div>
+                
+                <div class="work-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="work-step__number">3</div>
+                    <div class="work-step__content">
+                        <h3>Выезжаем на объект</h3>
+                        <p>В назначенное время наша техника прибывает на объект.</p>
+                    </div>
+                </div>
+                
+                <div class="work-step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="work-step__number">4</div>
+                    <div class="work-step__content">
+                        <h3>Выполняем работу</h3>
+                        <p>Оперативно и качественно выполняем все необходимые работы.</p>
+                    </div>
+                </div>
+                
+                <div class="work-step" data-aos="fade-right" data-aos-delay="500">
+                    <div class="work-step__number">5</div>
+                    <div class="work-step__content">
+                        <h3>Оформляем документы</h3>
+                        <p>После завершения работ оформляем все необходимые документы.</p>
+                    </div>
+                </div>
+                
+                <div class="work-step" data-aos="fade-left" data-aos-delay="600">
+                    <div class="work-step__number">6</div>
+                    <div class="work-step__content">
+                        <h3>Вы оплачиваете услугу</h3>
+                        <p>Принимаем наличный и безналичный расчет на ваш выбор.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Цены -->
+    <section id="prices" class="section prices">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">НАШИ ЦЕНЫ</h2>
+            
+            <div class="prices__note" data-aos="fade-up">
+                <p><strong>Стоимость услуг обсуждается индивидуально</strong></p>
+                <p>Цена зависит от объема работ, удаленности объекта, типа техники и сложности задачи. Для получения точной информации о стоимости, пожалуйста, свяжитесь с нами по телефону.</p>
+            </div>
+            
+            <div class="cta-block" data-aos="fade-up">
+                <a href="#order-form" class="btn btn-primary pulse-button">Заказать услугу</a>
+                <p>или звоните <a href="tel:+79534159696" class="tel-link">+7 (953) 415-96-96</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Зона обслуживания -->
+    <section id="coverage" class="section coverage">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ЗОНА ОБСЛУЖИВАНИЯ</h2>
+            
+            <div class="coverage__content">
+                <div class="coverage__description" data-aos="fade-up">
+                    <h3>Обслуживаем:</h3>
+                    <ul class="coverage__list">
+                        <li class="coverage__item">
+                            <svg class="coverage__check" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Все районы Нижнего Новгорода
+                        </li>
+                        <li class="coverage__item">
+                            <svg class="coverage__check" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Кстово и Кстовский район
+                        </li>
+                        <li class="coverage__item">
+                            <svg class="coverage__check" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            И другие населенные пункты в радиусе 50 км
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Отзывы -->
+    <section id="reviews" class="section reviews">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+            
+            <div class="reviews__slider">
+                <div class="reviews__track" id="reviewsTrack">
+                    <!-- Отзыв 1 -->
+                    <div class="review-card" data-aos="fade-up">
+                        <div class="review-card__content">
+                            <p class="review-card__text">"Вызывал для откачки септика на даче в Богородском районе. Приехали вовремя, работу выполнили быстро и аккуратно. Очень доволен сервисом! Буду обращаться регулярно."</p>
+                            <div class="review-card__author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Фото клиента" class="review-card__photo">
+                                <div class="review-card__info">
+                                    <h4>Алексей Петров</h4>
+                                    <p>Богородский район</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 2 -->
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="review-card__content">
+                            <p class="review-card__text">"Столкнулась с проблемой засора в частном доме. Позвонила, приехали в тот же день. Всё починили оперативно и недорого. Отдельно порадовала чистота после работы – все аккуратно, никаких следов. Рекомендую!"</p>
+                            <div class="review-card__author">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Фото клиента" class="review-card__photo">
+                                <div class="review-card__info">
+                                    <h4>Марина Соколова</h4>
+                                    <p>Автозаводский район</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 3 -->
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="review-card__content">
+                            <p class="review-card__text">"Обслуживаем нашу базу отдыха уже 3 года. Всегда вовремя, всегда качественно. Надежный партнер для бизнеса. Особенно ценим возможность безналичного расчета и официальные документы для бухгалтерии."</p>
+                            <div class="review-card__author">
+                                <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Фото клиента" class="review-card__photo">
+                                <div class="review-card__info">
+                                    <h4>Дмитрий Ковалев</h4>
+                                    <p>директор базы отдыха "Лесная"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 4 -->
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="review-card__content">
+                            <p class="review-card__text">"Заказывал откачку выгребной ямы в частном доме в Кстовском районе. Приехали даже раньше назначенного времени, что было очень кстати. Работу сделали быстро и профессионально. Цена соответствовала заявленной, без дополнительных наценок."</p>
+                            <div class="review-card__author">
+                                <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Фото клиента" class="review-card__photo">
+                                <div class="review-card__info">
+                                    <h4>Игорь Васильев</h4>
+                                    <p>Кстово</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 5 -->
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="review-card__content">
+                            <p class="review-card__text">"Регулярно пользуемся услугами этой компании для обслуживания канализации на нашей турбазе. Всегда все четко, без задержек. Важно, что техника разнообразная – могут прислать и маленькую машину для труднодоступных мест, и большую для основательной откачки."</p>
+                            <div class="review-card__author">
+                                <img src="https://randomuser.me/api/portraits/women/36.jpg" alt="Фото клиента" class="review-card__photo">
+                                <div class="review-card__info">
+                                    <h4>Наталья Иванова</h4>
+                                    <p>управляющая турбазой "Волжские зори"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews__controls">
+                    <button class="reviews__prev" id="reviewsPrev" aria-label="Предыдущий отзыв">←</button>
+                    <div class="reviews__dots" id="reviewsDots"></div>
+                    <button class="reviews__next" id="reviewsNext" aria-label="Следующий отзыв">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="section faq">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+            
+            <div class="faq__accordion" id="faqAccordion" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-item__question" aria-expanded="false" aria-controls="faq-1">
+                        <h3>Как быстро вы приезжаете после заявки?</h3>
+                        <span class="faq-item__icon">+</span>
+                    </div>
+                    <div class="faq-item__answer" id="faq-1">
+                        <p>В стандартном режиме – в течение дня или к согласованному времени. При аварийной ситуации – максимально оперативно, обычно в течение 1-2 часов.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-item__question" aria-expanded="false" aria-controls="faq-2">
+                        <h3>Работаете ли вы в выходные и праздничные дни?</h3>
+                        <span class="faq-item__icon">+</span>
+                    </div>
+                    <div class="faq-item__answer" id="faq-2">
+                        <p>Да, мы работаем ежедневно с 8:00 до 18:00, включая выходные и праздничные дни.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-item__question" aria-expanded="false" aria-controls="faq-3">
+                        <h3>Есть ли у вас скидки для постоянных клиентов?</h3>
+                        <span class="faq-item__icon">+</span>
+                    </div>
+                    <div class="faq-item__answer" id="faq-3">
+                        <p>Да, для постоянных клиентов мы предлагаем специальные условия обслуживания. Условия обсуждаются индивидуально.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-item__question" aria-expanded="false" aria-controls="faq-4">
+                        <h3>Какой длины шланги у ваших машин?</h3>
+                        <span class="faq-item__icon">+</span>
+                    </div>
+                    <div class="faq-item__answer" id="faq-4">
+                        <p>Стандартная длина шлангов – до 25 метров. При необходимости мы используем дополнительные секции, увеличивая длину до 50 метров.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-item__question" aria-expanded="false" aria-controls="faq-5">
+                        <h3>Нужно ли мне присутствовать при откачке?</h3>
+                        <span class="faq-item__icon">+</span>
+                    </div>
+                    <div class="faq-item__answer" id="faq-5">
+                        <p>Желательно, чтобы кто-то присутствовал для доступа к месту откачки и расчета после выполнения работ. Однако мы можем договориться и об обслуживании без вашего присутствия.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-item__question" aria-expanded="false" aria-controls="faq-6">
+                        <h3>Выдаете ли вы документы об оплате?</h3>
+                        <span class="faq-item__icon">+</span>
+                    </div>
+                    <div class="faq-item__answer" id="faq-6">
+                        <p>Да, мы предоставляем все необходимые документы для физических и юридических лиц.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Форма заявки -->
+    <section id="order-form" class="section order">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ЗАКАЗАТЬ УСЛУГУ</h2>
+            
+            <div class="order__content">
+                <div class="order__form-wrapper" data-aos="fade-right">
+                    <form id="orderForm" class="order__form">
+                        <!-- Скрытое поле для защиты от двойной отправки -->
+                        <input type="hidden" id="form_id" name="form_id" value="">
+                        
+                        <div class="form-group">
+                            <label for="name">Ваше имя*</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон*</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Адрес</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service_type">Тип услуги</label>
+                            <select id="service_type" name="service_type">
+                                <option value="Откачка септика">Откачка септика</option>
+                                <option value="Откачка выгребной ямы">Откачка выгребной ямы</option>
+                                <option value="Промывка канализации">Промывка канализации</option>
+                                <option value="Аварийный выезд">Аварийный выезд</option>
+                                <option value="Другое">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date_time">Желаемая дата и время</label>
+                            <input type="datetime-local" id="date_time" name="date_time">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment">Комментарий к заказу</label>
+                            <textarea id="comment" name="comment" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" id="submitButton">Отправить заявку</button>
+                    </form>
+                    <div class="form-message" id="formMessage" aria-live="polite"></div>
+                </div>
+                
+                <div class="order__contact-info" data-aos="fade-left">
+                    <h3>Свяжитесь с нами</h3>
+                    
+                    <div class="contact-block">
+                        <div class="contact-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3059/3059561.png" alt="" aria-hidden="true">
+                            <div>
+                                <h4>Телефон</h4>
+                                <a href="tel:+79534159696">+7 (953) 415-96-96</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="" aria-hidden="true">
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/79534159696">Сергей</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/906/906377.png" alt="" aria-hidden="true">
+                            <div>
+                                <h4>Telegram</h4>
+                                <a href="https://t.me/AssenizatorNN">@AssenizatorNN</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2664/2664627.png" alt="" aria-hidden="true">
+                            <div>
+                                <h4>Часы работы</h4>
+                                <p>Ежедневно с 8:00 до 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Полезная информация -->
+    <section class="section useful-info">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h2>
+            
+            <div class="useful-info__content">
+                <div class="info-card" data-aos="fade-up">
+                    <h3>Как ухаживать за септиком и выгребной ямой</h3>
+                    <ol>
+                        <li>
+                            <strong>Регулярная откачка</strong>
+                            <p>Оптимальная периодичность откачки – 1-2 раза в год, в зависимости от объема септика и интенсивности использования.</p>
+                        </li>
+                        <li>
+                            <strong>Использование специальных бактерий</strong>
+                            <p>Для улучшения процесса разложения органических отходов рекомендуется использовать специальные бактериальные препараты.</p>
+                        </li>
+                        <li>
+                            <strong>Контроль сливаемых жидкостей</strong>
+                            <p>Избегайте слива в канализацию агрессивных химических веществ, которые могут уничтожить полезные бактерии.</p>
+                        </li>
+                        <li>
+                            <strong>Своевременное обнаружение проблем</strong>
+                            <p>Обращайте внимание на признаки переполнения: неприятный запах, медленный слив воды, подтопление участка вокруг септика.</p>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Признаки необходимости вызова ассенизаторской машины</h3>
+                    <ul>
+                        <li>Неприятный запах вокруг септика или в доме</li>
+                        <li>Медленный слив воды в сантехнических приборах</li>
+                        <li>Переполнение септика или выгребной ямы</li>
+                        <li>Подтопление участка в месте расположения септика</li>
+                        <li>Профилактическая откачка не проводилась более года</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo-block">
+                    <img src="/static/images/logo.jpg" alt="Логотип Ассенизатор НН" class="footer__logo">
+                    <div class="footer__title">
+                        <h3>Ассенизатор НН</h3>
+                        <p>Ваш надежный помощник в решении канализационных проблем!</p>
+                    </div>
+                </div>
+                
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h4>Услуги</h4>
+                        <ul>
+                            <li><a href="#services">Откачка септиков</a></li>
+                            <li><a href="#services">Обслуживание частных домов</a></li>
+                            <li><a href="#services">Работа с предприятиями</a></li>
+                            <li><a href="#services">Промывка канализации</a></li>
+                            <li><a href="#services">Аварийный выезд</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Информация</h4>
+                        <ul>
+                            <li><a href="#advantages">О компании</a></li>
+                            <li><a href="#fleet">Автопарк</a></li>
+                            <li><a href="#prices">Цены</a></li>
+                            <li><a href="#coverage">Зона обслуживания</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Контакты</h4>
+                        <ul class="footer__contacts">
+                            <li>
+                                <img src="https://cdn-icons-png.flaticon.com/512/3059/3059561.png" alt="" aria-hidden="true">
+                                <a href="tel:+79534159696">+7 (953) 415-96-96</a>
+                            </li>
+                            <li>
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="" aria-hidden="true">
+                                <a href="https://wa.me/79534159696">Сергей (WhatsApp)</a>
+                            </li>
+                            <li>
+                                <img src="https://cdn-icons-png.flaticon.com/512/906/906377.png" alt="" aria-hidden="true">
+                                <a href="https://t.me/AssenizatorNN">@AssenizatorNN</a>
+                            </li>
+                            <li>
+                                <img src="https://cdn-icons-png.flaticon.com/512/2664/2664627.png" alt="" aria-hidden="true">
+                                <span>Ежедневно с 8:00 до 18:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2009-2025 Ассенизатор НН. Все права защищены.</p>
+                <p class="footer__privacy">
+                    <a href="/privacy-policy.html">Политика конфиденциальности</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Кнопка прокрутки вверх -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Прокрутить вверх">↑</button>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/static/js/script.js"></script>
+    
+
+</html>
